@@ -25,6 +25,26 @@
         'src/common/v8synchronizationcontext.cpp'
       ],
       'conditions': [
+        ['OS=="win" and target_arch=="x64"', {
+          "copies": [{
+                 'destination': '<(module_root_dir)/build/Release/',
+                 'files': [
+                    '<(module_root_dir)/lib/native/win32/x64/msvcr120.dll',
+                    '<(module_root_dir)/lib/native/win32/x64/msvcp120.dll'
+                  ]
+            }]
+        }],
+        
+        ['OS=="win" and target_arch=="ia32"', {
+          "copies": [{
+                 'destination': '<(module_root_dir)/build/Release/',
+                 'files': [
+                    '<(module_root_dir)/lib/native/win32/ia32/msvcr120.dll',
+                    '<(module_root_dir)/lib/native/win32/ia32/msvcp120.dll'
+                  ]
+            }]
+        }],
+      
         ['OS=="win"'
         , {
             'sources+': [ 

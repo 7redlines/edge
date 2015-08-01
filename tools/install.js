@@ -4,7 +4,7 @@ var exec = require('child_process').exec;
 var child;
 
 if(process.platform === 'win32') {
-	child = spawn('cmd', ['/c', 'node-gyp configure build --msvs_version=2013'], {stdio: 'inherit'});
+	child = spawn('cmd', ['/c', 'node-gyp configure build'], {stdio: 'inherit'});
 } else {
 	child = spawn('node-gyp', ['configure', 'build'], { stdio: 'inherit' });
 }

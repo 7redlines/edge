@@ -28,6 +28,7 @@
     }
   ],
   "dependencies": {
+    "bindings": "^1.2.1",
     "edge-cs": "0.2.7",
     "nan": "^1.6.2"
   },
